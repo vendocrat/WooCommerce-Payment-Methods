@@ -329,7 +329,7 @@ $vendocrat_woo_payment_methods = new vendocrat_Woo_Payment_Methods();
 function v_woo_payment_methods( $atts = array() ) {
 	global $vendocrat_woo_payment_methods;
 
-	echo $vendocrat_woo_payment_methods->get_payment_methods( $atts = array() );
+	echo $vendocrat_woo_payment_methods->get_payment_methods( $atts );
 }
 
 endif;

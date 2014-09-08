@@ -22,6 +22,11 @@ All icons are displayed using the truly awesome icon font <a href="https://githu
 
 Contributions are warmly welcome via <a href="https://github.com/vendocrat/WooComerce-Payment-Methods"><strong>GitHub</strong></a>.
 
+Translations included:
+* English
+* German
+* Italian
+
 == Installation ==
 
 1. Upload 'woocommerce-accepted-payment-methods' to the '/wp-content/plugins/' directory

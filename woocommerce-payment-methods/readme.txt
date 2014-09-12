@@ -30,7 +30,7 @@ Translations included:
 
 == Installation ==
 
-1. Upload 'woocommerce-accepted-payment-methods' to the '/wp-content/plugins/' directory
+1. Upload 'woocommerce-payment-methods' to the '/wp-content/plugins/' directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Display your accepted methods via: Shortcode [v_woo_payment_methods], Widget or template tag '<?php v_woo_payment_methods(); ?>.
 4. Done!

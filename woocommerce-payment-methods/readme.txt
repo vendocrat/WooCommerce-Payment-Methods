@@ -1,10 +1,10 @@
 === WooCommerce Payment Methods ===
 Contributors:      vendocrat, AlexanderPoellmann
-Donate link:       http://example.com/
+Donate link:       http://vendocr.at/donate/
 Tags:              woocommerce, credit card, logo, payment
 Requires at least: 3.5
 Tested up to:      4.1
-Stable tag:        0.1.0
+Stable tag:        0.1.1
 License:           GNU General Public License v3.0
 License URI:       http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -23,13 +23,14 @@ All icons are displayed using the truly awesome icon font <a href="https://githu
 Contributions are warmly welcome via <a href="https://github.com/vendocrat/WooComerce-Payment-Methods"><strong>GitHub</strong></a>.
 
 Translations included:
-* English
-* German
-* Italian
+
+*   English
+*   German
+*   Italian
 
 == Installation ==
 
-1. Upload 'woocommerce-accepted-payment-methods' to the '/wp-content/plugins/' directory
+1. Upload 'woocommerce-payment-methods' to the '/wp-content/plugins/' directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Display your accepted methods via: Shortcode [v_woo_payment_methods], Widget or template tag '<?php v_woo_payment_methods(); ?>.
 4. Done!
@@ -51,3 +52,6 @@ Note: As we're using a webfont called <a href="https://github.com/orlandotm/paym
 
 = 0.1.0 =
 Initial release.
+
+= 0.1.1 =
+Fixed wrong url and typo in readme.txt

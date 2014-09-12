@@ -5,7 +5,7 @@
  * @subpackage	Payment Methods/Assets
  *
  * @since		2014-09-08
- * @version		2014-09-10
+ * @version		2014-09-08
  *
  * @author		Poellmann Alexander Manfred <alex@vendocr.at>
  * @copyright	Copyright 2014 vendocrat. All Rights Reserved.
@@ -36,9 +36,7 @@
 			border:1px solid #333;}
 
 		.payment-methods-inverse > li > b,
-		.payment-methods-inverse > li > i,
-		.payment-methods-i > li > b,
-		.payment-methods-i > li > i {
+		.payment-methods-inverse > li > i {
 			color:#333;
 			background:#fff;
 			border-color:#fff;}

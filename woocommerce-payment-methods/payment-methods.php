@@ -3,7 +3,7 @@
  * Plugin Name: WooCommerce Payment Methods (by vendocrat)
  * Plugin URI:  http://vendocr.at/
  * Description: <strong>Easily display your accepted payment methods from WooCommerce.</strong> Handcrafted with &hearts; by <a href='http://vendocr.at/'>vendocrat</a> in Vienna.
- * Version:     0.1.1
+ * Version:     0.1.2
  * Author:      vendocrat
  * Author URI:  http://vendocr.at/
  * License:     GNU General Public License v3.0
@@ -128,7 +128,7 @@ class vendocrat_Woo_Payment_Methods {
 	 * Woo Accepted Payment Methods
 	 *
 	 * @since 2014-09-07
-	 * @version 2014-09-10
+	 * @version 2014-09-12
 	 **************************************************/
 	function get_payment_methods( $atts = array(), $content = null ) {
 		extract(

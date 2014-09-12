@@ -54,4 +54,7 @@ Note: As we're using a webfont called <a href="https://github.com/orlandotm/paym
 Initial release.
 
 = 0.1.1 =
-Fixed wrong url and typo in readme.txt
+Fixed wrong url and typo in readme.
+
+= 0.1.2 =
+Updated shortcode and screenshots.

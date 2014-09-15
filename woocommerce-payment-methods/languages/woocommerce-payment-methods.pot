@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce Payment Methods\n"
-"POT-Creation-Date: 2014-09-08 01:40+0100\n"
-"PO-Revision-Date: 2014-09-08 01:40+0100\n"
+"POT-Creation-Date: 2014-09-15 03:10+0100\n"
+"PO-Revision-Date: 2014-09-15 03:10+0100\n"
 "Last-Translator: \n"
 "Language-Team: vendocrat <hello@vendocr.at>\n"
 "Language: en\n"
@@ -60,18 +60,38 @@ msgid "Yes"
 msgstr ""
 
 #: ../classes/class-widget-payment-methods.php:121
+msgid "Placement"
+msgstr ""
+
+#: ../classes/class-widget-payment-methods.php:123
+msgid "Top"
+msgstr ""
+
+#: ../classes/class-widget-payment-methods.php:124
+msgid "Right"
+msgstr ""
+
+#: ../classes/class-widget-payment-methods.php:125
+msgid "Bottom"
+msgstr ""
+
+#: ../classes/class-widget-payment-methods.php:126
+msgid "Left"
+msgstr ""
+
+#: ../classes/class-widget-payment-methods.php:130
 msgid "Extra classes"
 msgstr ""
 
-#: ../payment-methods.php:220 ../payment-methods.php:260
-#: ../payment-methods.php:266 ../payment-methods.php:271
+#: ../payment-methods.php:221 ../payment-methods.php:261
+#: ../payment-methods.php:267 ../payment-methods.php:272
 msgid "Bank Transfer"
 msgstr ""
 
-#: ../payment-methods.php:224
+#: ../payment-methods.php:225
 msgid "Pay with Cheque"
 msgstr ""
 
-#: ../payment-methods.php:292
+#: ../payment-methods.php:293
 msgid "Cash on Delivery"
 msgstr ""

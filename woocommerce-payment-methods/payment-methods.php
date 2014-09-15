@@ -3,7 +3,7 @@
 /* Plugin Name: WooCommerce Payment Methods (by vendocrat)
  * Plugin URI:  http://vendocr.at/
  * Description: <strong>Easily display your accepted payment methods from WooCommerce.</strong> Handcrafted with &hearts; by <a href='http://vendocr.at/'>vendocrat</a> in Vienna.
- * Version:     0.1.1
+ * Version:     0.1.2
  * Author:      vendocrat
  * Author URI:  http://vendocr.at/
  * License:     GNU General Public License v3.0
@@ -128,16 +128,17 @@ class vendocrat_Woo_Payment_Methods {
 	 * Woo Accepted Payment Methods
 	 *
 	 * @since 2014-09-07
-	 * @version 2014-09-08
+	 * @version 2014-09-15
 	 **************************************************/
 	function get_payment_methods( $atts = array(), $content = null ) {
 		extract(
 			shortcode_atts(
 				array(
-					'methods' => array(),   // keys are the gateway slugs (lowercase) for the icon class, values are the title attributes
-					'style'   => 'default', // default, inverse, o/outline
-					'tooltip' => false,     // adds data attributes to icon to be used for diplaying tooltips (made for Bootstrap)
-					'xclass'  => false,     // add any extra classes, seperated by a space
+					'methods'   => array(),   // keys are the gateway slugs (lowercase) for the icon class, values are the title attributes
+					'style'     => 'default', // default, inverse, o/outline
+					'tooltip'   => false,     // adds data attributes to icon to be used for diplaying tooltips (made for Bootstrap)
+					'placement' => 'bottom',  // set tooltip placement (new since 0.1.2)
+					'xclass'    => false,     // add any extra classes, seperated by a space
 				), $atts
 			)
 		);
@@ -183,7 +184,7 @@ class vendocrat_Woo_Payment_Methods {
 					$icon = '<i';
 					$icon.= ($class) ? ' class="'. esc_attr( trim($class) ) .'"' : '';
 					$icon.= ($title) ? ' title="'. esc_attr( trim($title) ) .'"' : '';
-					$icon.= ($tooltip) ? ' data-toggle="tooltip" data-placement="bottom"' : '';
+					$icon.= ($tooltip AND $placement) ? ' data-toggle="tooltip" data-placement="'. $placement .'"' : '';
 					$icon.= '></i>';
 					break;
 			}

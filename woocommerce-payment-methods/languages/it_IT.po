@@ -1,10 +1,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce Payment Methods\n"
-"POT-Creation-Date: 2014-09-08 01:40+0100\n"
-"PO-Revision-Date: 2014-09-08 02:12+0100\n"
+"POT-Creation-Date: 2014-09-15 03:08+0100\n"
+"PO-Revision-Date: 2014-09-15 03:10+0100\n"
 "Last-Translator: \n"
 "Language-Team: vendocrat <hello@vendocr.at>\n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,7 +13,6 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: __;_e\n"
-"Language: it\n"
 "X-Poedit-SearchPath-0: ..\n"
 
 #: ../classes/class-widget-payment-methods.php:33
@@ -60,18 +60,38 @@ msgid "Yes"
 msgstr "Si"
 
 #: ../classes/class-widget-payment-methods.php:121
+msgid "Placement"
+msgstr "Posizione"
+
+#: ../classes/class-widget-payment-methods.php:123
+msgid "Top"
+msgstr "Sopra"
+
+#: ../classes/class-widget-payment-methods.php:124
+msgid "Right"
+msgstr "Destra"
+
+#: ../classes/class-widget-payment-methods.php:125
+msgid "Bottom"
+msgstr "Abbasso"
+
+#: ../classes/class-widget-payment-methods.php:126
+msgid "Left"
+msgstr "Sinistra"
+
+#: ../classes/class-widget-payment-methods.php:130
 msgid "Extra classes"
 msgstr "Classi extra"
 
-#: ../payment-methods.php:220 ../payment-methods.php:260
-#: ../payment-methods.php:266 ../payment-methods.php:271
+#: ../payment-methods.php:221 ../payment-methods.php:261
+#: ../payment-methods.php:267 ../payment-methods.php:272
 msgid "Bank Transfer"
 msgstr "Trasferimento bancario"
 
-#: ../payment-methods.php:224
+#: ../payment-methods.php:225
 msgid "Pay with Cheque"
 msgstr "Paga con assegno"
 
-#: ../payment-methods.php:292
+#: ../payment-methods.php:293
 msgid "Cash on Delivery"
 msgstr "Pagamento con contrassegno"

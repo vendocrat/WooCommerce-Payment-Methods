@@ -1,15 +1,16 @@
 /**
- * PaymentFont Styles 0.0.9
+ * PaymentFont Styles 0.1.0
  *
  * @since     2014-09-21
- * @version   2014-09-21
+ * @version   2014-09-22
  *
  * @author    Poellmann Alexander Manfred <alex@vendocr.at>
  * @copyright Copyright 2014 vendocrat. All Rights Reserved.
  * @link      http://vendocr.at/
  *
- * @license   http://paymentfont.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ * @license   Font: SIL OFL 1.1, CSS: MIT License
  */
+
 @font-face {
   font-family:'PaymentFont';
   src:url('../fonts/paymentfont-webfont.eot');
@@ -252,5 +253,5 @@
 }
 
 /*
- * NO MORE LOVE TO GIVE
+ * E fatto!
  */

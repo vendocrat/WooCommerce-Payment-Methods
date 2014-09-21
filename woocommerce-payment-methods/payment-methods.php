@@ -417,5 +417,5 @@ function v_woo_payment_methods( $atts = array() ) {
 endif;
 
 /*
- * NO MORE LOVE TO GIVE
+ * E fatto!
  */

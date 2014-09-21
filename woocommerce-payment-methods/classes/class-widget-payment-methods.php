@@ -161,5 +161,5 @@ class vendocrat_Widget_Payment_Methods extends WP_Widget {
 } // END Class
 
 /*
- * NO MORE LOVE TO GIVE
+ * E fatto!
  */

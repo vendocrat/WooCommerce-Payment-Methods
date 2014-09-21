@@ -20,11 +20,11 @@ You are using the famous Bootstrap framework? Awesome, cause we've added the mar
 
 **PaymentFont webfont**
 
-This plugin uses the webfont <a href="https://github.com/vendocrat/PaymentFont">PaymentFont</a> by <a href="https://twitter.com/vendocrat">@vendocrat</a> to display the brand icons, making them look good on every screen.
+This plugin uses the webfont [PaymentFont](https://github.com/vendocrat/PaymentFont) by [vendocrat](http://vendocr.at) to display the brand icons, making them look good on every screen.
 
 **Contributions**
 
-Contributions are warmly welcome via <a href="https://github.com/vendocrat/WooComerce-Payment-Methods"><strong>GitHub</strong></a>.
+Contributions are warmly welcome via [GitHub](https://github.com/vendocrat/WooComerce-Payment-Methods).
 
 **Translations**
 
@@ -34,7 +34,7 @@ Translations included:
 *   German
 *   Italian
 
-Please contact me via Twitter (<a href="https://twitter.com/vendocrat">@vendocrat</a>) or hit us on <a href="https://github.com/vendocrat/WooComerce-Payment-Methods">GitHub</a>, if you have a translation you want to contribute!
+Please contact us via [Twitter](https://twitter.com/vendocrat) or hit us on [GitHub](https://github.com/vendocrat/WooComerce-Payment-Methods), if you have a translation you want to contribute!
 
 == Installation ==
 

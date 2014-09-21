@@ -5,12 +5,14 @@
  * @subpackage	Payment Methods/Assets
  *
  * @since		2014-09-08
- * @version		2014-09-08
+ * @version		2014-09-21
  *
  * @author		Poellmann Alexander Manfred <alex@vendocr.at>
  * @copyright	Copyright 2014 vendocrat. All Rights Reserved.
  * @link		http://vendocr.at/
  */
+
+/**** Base Styles */
 
 .payment-methods {
 	padding-left:0;
@@ -23,7 +25,6 @@
 
 		vertical-align:top;}
 
-		.payment-methods > li > b,
 		.payment-methods > li > i {
 			display:block !important;
 			cursor:default;
@@ -31,33 +32,28 @@
 
 			border-radius:4px;
 
+			background:transparent;
+			border:1px solid transparent;}
+
+		.payment-methods-inverse > li > i,
+		.payment-methods-i > li > i {
 			color:#fff;
 			background:#333;
-			border:1px solid #333;}
+			border-color:#333;}
 
-		.payment-methods-inverse > li > b,
-		.payment-methods-inverse > li > i {
-			color:#333;
-			background:#fff;
-			border-color:#fff;}
-
-		.payment-methods-outline > li > b,
 		.payment-methods-outline > li > i,
-		.payment-methods-o > li > b,
 		.payment-methods-o > li > i {
-			color:#333;
-			background:none;}
-
-			.payment-methods > li > b {
-				padding-left:8px;
-				padding-right:8px;
-
-				font-size:0.9em;font-weight:300;
-				line-height:1.6;}
+			border-color:#777;}
 
 			.payment-methods > li > i {
 				font-size:1.5em;
 				line-height:1;}
+
+/**** Widget */
+.widget_vendocrat_payment_methods {}
+
+	.widget_vendocrat_payment_methods ul {
+		margin-bottom:0;}
 
 /*
  * NO MORE LOVE TO GIVE

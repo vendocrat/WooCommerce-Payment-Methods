@@ -4,7 +4,7 @@ Donate link:       http://vendocr.at/donate/
 Tags:              woocommerce, credit card, logo, payment
 Requires at least: 3.5
 Tested up to:      4.1
-Stable tag:        0.1.2
+Stable tag:        0.2.0
 License:           GNU General Public License v3.0
 License URI:       http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -18,15 +18,23 @@ You can display them via shortcode, widget or template tag in three available st
 
 You are using the famous Bootstrap framework? Awesome, cause we've added the markup for tooltips, so that users can see the payment methods name on hover.
 
-All icons are displayed using the truly awesome icon font <a href="https://github.com/orlandotm/payment-webfont">Payment Webfont</a> by @orlandotm, making them look good on every screen.
+**PaymentFont webfont**
+
+This plugin uses the webfont <a href="https://github.com/vendocrat/PaymentFont">PaymentFont</a> by <a href="https://twitter.com/vendocrat">@vendocrat</a> to display the brand icons, making them look good on every screen.
+
+**Contributions**
 
 Contributions are warmly welcome via <a href="https://github.com/vendocrat/WooComerce-Payment-Methods"><strong>GitHub</strong></a>.
+
+**Translations**
 
 Translations included:
 
 *   English
 *   German
 *   Italian
+
+Please contact me via Twitter (<a href="https://twitter.com/vendocrat">@vendocrat</a>) or hit us on <a href="https://github.com/vendocrat/WooComerce-Payment-Methods">GitHub</a>, if you have a translation you want to contribute!
 
 == Installation ==
 
@@ -39,14 +47,12 @@ Translations included:
 
 = Why is payment method {XYZ} missing? =
 
-Please report any missing payment methods via <a href="https://github.com/vendocrat/WooComerce-Payment-Methods"><strong>GitHub's issues system</strong></a> or hit us at <a href="http://twitter.com/vendocrat">@vendocrat</a>.
-
-Note: As we're using a webfont called <a href="https://github.com/orlandotm/payment-webfont">Payment Webfont</a> by @orlandotm, it may be possible that there is just no icon available for your desired payment method. Open an issue at their GitHub repo and ask for it to be added!
+Miss some payment methods? Let me have a look at it by opening an issue on <a href="https://github.com/vendocrat/WooComerce-Payment-Methods"><strong>GitHub</strong></a> or hit us at <a href="http://twitter.com/vendocrat">@vendocrat</a>.
 
 == Screenshots ==
 
-1. WooCommerce Payment Methods Shortcodes
-2. WooCommerce Payment Methods Widgets
+1. Shortcode output (top-down: default, inverse, outline style)
+2. Widgets (top-down: default, inverse, outline style)
 
 == Changelog ==
 
@@ -58,3 +64,6 @@ Fixed wrong url and typo in readme, updated shortcode and screenshots.
 
 = 0.1.2 =
 Fixed an error in widget class, added placement option to tooltips, updated language files.
+
+= 0.2.0 =
+Now using PaymentFont to display brand icons. Fixed textdomain issue plus some minor fixes and enhancements. Added new screenshots!

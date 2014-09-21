@@ -6,7 +6,7 @@
  * @subpackage	Payment Methods/Classes
  *
  * @since		2014-09-08
- * @version		2014-09-15
+ * @version		2014-09-22
  *
  * @author		Poellmann Alexander Manfred <alex@vendocr.at>
  * @copyright	Copyright 2014 vendocrat. All Rights Reserved.
@@ -29,10 +29,10 @@ class vendocrat_Widget_Payment_Methods extends WP_Widget {
 	 * @version 2014-09-08
 	 **************************************************/
 	function __construct() {
-		$this->slug = 'vendocrat_widget_payment_methods';
-		$this->name = __( 'Payment Methods', 'vendocrat-payment-methods' );
-		$this->desc = __( 'Easily display your accepted payment methods', 'vendocrat-payment-methods' );
-		$this->title = __( 'Accepted Payment Methods', 'vendocrat-payment-methods' );
+		$this->slug  = 'vendocrat_payment_methods';
+		$this->name  = __( 'Payment Methods', 'payment-methods' );
+		$this->desc  = __( 'Easily display your accepted payment methods', 'payment-methods' );
+		$this->title = __( 'Accepted Payment Methods', 'payment-methods' );
 		
 		parent::__construct(
 			$this->slug,
@@ -56,6 +56,7 @@ class vendocrat_Widget_Payment_Methods extends WP_Widget {
 	public function widget( $args, $instance ) {
 		$title = apply_filters( 'widget_title', $instance['title'] );
 
+		$methods   = $instance['methods'];
 		$style     = $instance['style'];
 		$tooltip   = ($instance['tooltip'] != 'true') ? false : true;
 		$placement = $instance['placement'];
@@ -72,9 +73,11 @@ class vendocrat_Widget_Payment_Methods extends WP_Widget {
 		global $vendocrat_woo_payment_methods;
 
 		$atts = array(
-			'style'   => $style,
-			'tooltip' => $tooltip,
-			'xclass'  => $xclass,
+			'methods'   => $methods,
+			'style'     => $style,
+			'tooltip'   => $tooltip,
+			'placement' => $placement,
+			'xclass'    => $xclass,
 		);
 		echo $vendocrat_woo_payment_methods->get_payment_methods( $atts );
 
@@ -91,43 +94,45 @@ class vendocrat_Widget_Payment_Methods extends WP_Widget {
 	 **************************************************/
 	public function form( $instance ) {
 		$defaults = array(
-			'title'   => $this->title,
-			'style'   => 'default',
-			'tooltip' => 'false',
-			'xclass'  => '',
+			'title'     => $this->title,
+			'methods'   => '',
+			'style'     => 'default',
+			'tooltip'   => 'false',
+			'placement' => 'bottom',
+			'xclass'    => '',
 		);
 		$instance = wp_parse_args( (array) $instance, $defaults );
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e( 'Title', 'vendocrat-payment-methods' ); ?>:</label>
+			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e( 'Title', 'payment-methods' ); ?>:</label>
 			<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'style' ); ?>"><?php _e( 'Style', 'vendocrat-payment-methods' ); ?>:</label>
+			<label for="<?php echo $this->get_field_id( 'style' ); ?>"><?php _e( 'Style', 'payment-methods' ); ?>:</label>
 			<select name="<?php echo $this->get_field_name( 'style' ); ?>" class="widefat" id="<?php echo $this->get_field_id( 'style' ); ?>">
-				<option value="default"<?php selected( $instance['style'], 'default' ); ?>><?php _e( 'Default', 'vendocrat-payment-methods' ); ?></option>
-				<option value="inverse"<?php selected( $instance['style'], 'inverse' ); ?>><?php _e( 'Inverse', 'vendocrat-payment-methods' ); ?></option>
-				<option value="o"<?php selected( $instance['style'], 'o' ); ?>><?php _e( 'Outline', 'vendocrat-payment-methods' ); ?></option>
+				<option value="default"<?php selected( $instance['style'], 'default' ); ?>><?php _e( 'Default', 'payment-methods' ); ?></option>
+				<option value="inverse"<?php selected( $instance['style'], 'inverse' ); ?>><?php _e( 'Inverse', 'payment-methods' ); ?></option>
+				<option value="o"<?php selected( $instance['style'], 'o' ); ?>><?php _e( 'Outline', 'payment-methods' ); ?></option>
 			</select>
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'tooltip' ); ?>"><?php _e( 'Add Tooltip markup?', 'vendocrat-payment-methods' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'tooltip' ); ?>"><?php _e( 'Add Tooltip markup?', 'payment-methods' ); ?></label>
 			<select name="<?php echo $this->get_field_name( 'tooltip' ); ?>" class="widefat" id="<?php echo $this->get_field_id( 'tooltip' ); ?>">
-				<option value="false"<?php selected( $instance['tooltip'], 'false' ); ?>><?php _e( 'No', 'vendocrat-payment-methods' ); ?></option>
-				<option value="true"<?php selected( $instance['tooltip'], 'true' ); ?>><?php _e( 'Yes', 'vendocrat-payment-methods' ); ?></option>
+				<option value="false"<?php selected( $instance['tooltip'], 'false' ); ?>><?php _e( 'No', 'payment-methods' ); ?></option>
+				<option value="true"<?php selected( $instance['tooltip'], 'true' ); ?>><?php _e( 'Yes', 'payment-methods' ); ?></option>
 			</select>
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'placement' ); ?>"><?php _e( 'Placement', 'vendocrat-payment-methods' ); ?>:</label>
+			<label for="<?php echo $this->get_field_id( 'placement' ); ?>"><?php _e( 'Placement', 'payment-methods' ); ?>:</label>
 			<select name="<?php echo $this->get_field_name( 'placement' ); ?>" class="widefat" id="<?php echo $this->get_field_id( 'placement' ); ?>">
-				<option value="top"<?php selected( $instance['placement'], 'top' ); ?>><?php _e( 'Top', 'vendocrat-payment-methods' ); ?></option>
-				<option value="right"<?php selected( $instance['placement'], 'right' ); ?>><?php _e( 'Right', 'vendocrat-payment-methods' ); ?></option>
-				<option value="bottom"<?php selected( $instance['placement'], 'bottom' ); ?>><?php _e( 'Bottom', 'vendocrat-payment-methods' ); ?></option>
-				<option value="left"<?php selected( $instance['placement'], 'left' ); ?>><?php _e( 'Left', 'vendocrat-payment-methods' ); ?></option>
+				<option value="top"<?php selected( $instance['placement'], 'top' ); ?>><?php _e( 'Top', 'payment-methods' ); ?></option>
+				<option value="right"<?php selected( $instance['placement'], 'right' ); ?>><?php _e( 'Right', 'payment-methods' ); ?></option>
+				<option value="bottom"<?php selected( $instance['placement'], 'bottom' ); ?>><?php _e( 'Bottom', 'payment-methods' ); ?></option>
+				<option value="left"<?php selected( $instance['placement'], 'left' ); ?>><?php _e( 'Left', 'payment-methods' ); ?></option>
 			</select>
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id('xclass'); ?>"><?php _e( 'Extra classes', 'vendocrat-payment-methods' ); ?>:</label>
+			<label for="<?php echo $this->get_field_id('xclass'); ?>"><?php _e( 'Extra classes', 'payment-methods' ); ?>:</label>
 			<input class="widefat" id="<?php echo $this->get_field_id('xclass'); ?>" name="<?php echo $this->get_field_name('xclass'); ?>" type="text" value="<?php echo esc_attr( $instance['xclass'] ); ?>" />
 		</p>
 		<?php
@@ -144,6 +149,7 @@ class vendocrat_Widget_Payment_Methods extends WP_Widget {
 		$instance = $old_instance;
 
 		$instance['title']     = strip_tags( $new_instance['title'] );
+		$instance['methods']   = esc_attr( $new_instance['methods'] );
 		$instance['style']     = esc_attr( $new_instance['style'] );
 		$instance['tooltip']   = esc_attr( $new_instance['tooltip'] );
 		$instance['placement'] = esc_attr( $new_instance['placement'] );

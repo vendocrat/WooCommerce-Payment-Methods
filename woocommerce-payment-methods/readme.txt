@@ -4,7 +4,7 @@ Donate link:       http://vendocr.at/donate/
 Tags:              woocommerce, credit card, logo, payment
 Requires at least: 3.5
 Tested up to:      4.1
-Stable tag:        0.2.0
+Stable tag:        0.2.1
 License:           GNU General Public License v3.0
 License URI:       http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -24,7 +24,7 @@ This plugin uses the webfont [PaymentFont](https://github.com/vendocrat/PaymentF
 
 **Contributions**
 
-Contributions are warmly welcome via [GitHub](https://github.com/vendocrat/WooComerce-Payment-Methods).
+Contributions are warmly welcome via [GitHub](https://github.com/vendocrat/WooCommerce-Payment-Methods).
 
 **Translations**
 
@@ -34,7 +34,7 @@ Translations included:
 *   German
 *   Italian
 
-Please contact us via [Twitter](https://twitter.com/vendocrat) or hit us on [GitHub](https://github.com/vendocrat/WooComerce-Payment-Methods), if you have a translation you want to contribute!
+Please contact us via [Twitter](https://twitter.com/vendocrat) or hit us on [GitHub](https://github.com/vendocrat/WooCommerce-Payment-Methods), if you have a translation you want to contribute!
 
 == Installation ==
 
@@ -47,7 +47,7 @@ Please contact us via [Twitter](https://twitter.com/vendocrat) or hit us on [Git
 
 = Why is payment method {XYZ} missing? =
 
-Miss some payment methods? Let me have a look at it by opening an issue on <a href="https://github.com/vendocrat/WooComerce-Payment-Methods"><strong>GitHub</strong></a> or hit us at <a href="http://twitter.com/vendocrat">@vendocrat</a>.
+Miss some payment methods? Let me have a look at it by opening an issue on <a href="https://github.com/vendocrat/WooCommerce-Payment-Methods"><strong>GitHub</strong></a> or hit us at <a href="http://twitter.com/vendocrat">@vendocrat</a>.
 
 == Screenshots ==
 
@@ -67,3 +67,6 @@ Fixed an error in widget class, added placement option to tooltips, updated lang
 
 = 0.2.0 =
 Now using PaymentFont to display brand icons. Fixed textdomain issue plus some minor fixes and enhancements. Added new screenshots!
+
+= 0.2.1 =
+Fixed typo.

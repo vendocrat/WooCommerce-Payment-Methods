@@ -53,6 +53,7 @@ Miss some payment methods? Let me have a look at it by opening an issue on <a hr
 
 1. Shortcode output (top-down: default, inverse, outline style)
 2. Widgets (top-down: default, inverse, outline style)
+3. WooCommerce Checkout
 
 == Changelog ==
 
@@ -70,3 +71,6 @@ Now using PaymentFont to display brand icons. Fixed textdomain issue plus some m
 
 = 0.2.1 =
 Fixed typo.
+
+= 0.2.2 =
+Added CSS to replace payment provider images on WooCommerce Checkout with PaymentFont icons (see screenshots).

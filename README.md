@@ -3,6 +3,8 @@ WooCommerce Payment Methods 0.2.1
 
 Easily display your accepted payment methods
 
+![alt tag](https://github.com/vendocrat/WooCommerce-Payment-Methods/blob/master/woocommerce-payment-methods/screenshot-1.png)
+
 ##Description
 
 WooCommerce Payment Methods allows you to display your accepted payment methods. By default the plugin shows all available payment methods, but you can also specify them manually.

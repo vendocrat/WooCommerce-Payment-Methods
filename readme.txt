@@ -24,7 +24,7 @@ This plugin uses the webfont [PaymentFont](https://github.com/vendocrat/PaymentF
 
 **Contributions**
 
-Contributions are warmly welcome via [GitHub](https://github.com/vendocrat/WooCommerce-Payment-Methods).
+Contributions are warmly welcome via [GitHub](https://github.com/vendocrat/).
 
 **Translations**
 
@@ -34,7 +34,7 @@ Translations included:
 *   German
 *   Italian
 
-Please contact us via [Twitter](https://twitter.com/vendocrat) or hit us on [GitHub](https://github.com/vendocrat/WooCommerce-Payment-Methods), if you have a translation you want to contribute!
+Please contact us via [Twitter](https://twitter.com/vendocrat) or hit us on [GitHub](https://github.com/vendocrat/), if you have a translation you want to contribute!
 
 == Installation ==
 

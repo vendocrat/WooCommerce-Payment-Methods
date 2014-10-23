@@ -165,13 +165,8 @@ class vendocrat_WC_Payment_Methods {
 	 * @return void
 	 *
 	 * @since 2014-09-08
-	 * @version 2014-09-08
+	 * @version 2014-10-23
 	 **************************************************/
-/*
-	static function load_plugin_textdomain() {
-		load_plugin_textdomain( 'payment-methods', false, basename( $this->plugin_dir ) .'/languages/' );
-	}
-*/
 	public function load_plugin_textdomain() {
 		$locale = apply_filters( 'plugin_locale', get_locale(), 'woocommerce-payment-methods' );
 		$dir    = trailingslashit( WP_LANG_DIR );

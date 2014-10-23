@@ -1,12 +1,12 @@
 <?php
 /**
- * vendocrat Payment Methods widget
+ * Payment Methods widget
  *
  * @package		vendocrat
- * @subpackage	Payment Methods/Classes
+ * @subpackage	Payment Methods
  *
  * @since		2014-09-08
- * @version		2014-09-22
+ * @version		2014-10-21
  *
  * @author		Poellmann Alexander Manfred <alex@vendocr.at>
  * @copyright	Copyright 2014 vendocrat. All Rights Reserved.
@@ -15,7 +15,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class vendocrat_Widget_Payment_Methods extends WP_Widget {
+class vendocrat_Widget_WC_Payment_Methods extends WP_Widget {
 
 	public $slug;
 	public $name;
@@ -30,9 +30,9 @@ class vendocrat_Widget_Payment_Methods extends WP_Widget {
 	 **************************************************/
 	function __construct() {
 		$this->slug  = 'vendocrat_payment_methods';
-		$this->name  = __( 'Payment Methods', 'payment-methods' );
-		$this->desc  = __( 'Easily display your accepted payment methods', 'payment-methods' );
-		$this->title = __( 'Accepted Payment Methods', 'payment-methods' );
+		$this->name  = __( 'Payment Methods', 'woocommerce-payment-methods' );
+		$this->desc  = __( 'Easily display your accepted payment methods', 'woocommerce-payment-methods' );
+		$this->title = __( 'Accepted Payment Methods', 'woocommerce-payment-methods' );
 		
 		parent::__construct(
 			$this->slug,
@@ -70,7 +70,7 @@ class vendocrat_Widget_Payment_Methods extends WP_Widget {
 			echo $before_title . $title . $after_title;
 		}
 
-		global $vendocrat_woo_payment_methods;
+		global $vendocrat_wc_payment_methods;
 
 		$atts = array(
 			'methods'   => $methods,
@@ -79,7 +79,7 @@ class vendocrat_Widget_Payment_Methods extends WP_Widget {
 			'placement' => $placement,
 			'xclass'    => $xclass,
 		);
-		echo $vendocrat_woo_payment_methods->get_payment_methods( $atts );
+		echo $vendocrat_wc_payment_methods->get_payment_methods( $atts );
 
 		echo $after_widget;
 	}
@@ -104,35 +104,35 @@ class vendocrat_Widget_Payment_Methods extends WP_Widget {
 		$instance = wp_parse_args( (array) $instance, $defaults );
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e( 'Title', 'payment-methods' ); ?>:</label>
+			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e( 'Title', 'woocommerce-payment-methods' ); ?>:</label>
 			<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'style' ); ?>"><?php _e( 'Style', 'payment-methods' ); ?>:</label>
+			<label for="<?php echo $this->get_field_id( 'style' ); ?>"><?php _e( 'Style', 'woocommerce-payment-methods' ); ?>:</label>
 			<select name="<?php echo $this->get_field_name( 'style' ); ?>" class="widefat" id="<?php echo $this->get_field_id( 'style' ); ?>">
-				<option value="default"<?php selected( $instance['style'], 'default' ); ?>><?php _e( 'Default', 'payment-methods' ); ?></option>
-				<option value="inverse"<?php selected( $instance['style'], 'inverse' ); ?>><?php _e( 'Inverse', 'payment-methods' ); ?></option>
-				<option value="o"<?php selected( $instance['style'], 'o' ); ?>><?php _e( 'Outline', 'payment-methods' ); ?></option>
+				<option value="default"<?php selected( $instance['style'], 'default' ); ?>><?php _e( 'Default', 'woocommerce-payment-methods' ); ?></option>
+				<option value="inverse"<?php selected( $instance['style'], 'inverse' ); ?>><?php _e( 'Inverse', 'woocommerce-payment-methods' ); ?></option>
+				<option value="o"<?php selected( $instance['style'], 'o' ); ?>><?php _e( 'Outline', 'woocommerce-payment-methods' ); ?></option>
 			</select>
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'tooltip' ); ?>"><?php _e( 'Add Tooltip markup?', 'payment-methods' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'tooltip' ); ?>"><?php _e( 'Add Tooltip markup?', 'woocommerce-payment-methods' ); ?></label>
 			<select name="<?php echo $this->get_field_name( 'tooltip' ); ?>" class="widefat" id="<?php echo $this->get_field_id( 'tooltip' ); ?>">
-				<option value="false"<?php selected( $instance['tooltip'], 'false' ); ?>><?php _e( 'No', 'payment-methods' ); ?></option>
-				<option value="true"<?php selected( $instance['tooltip'], 'true' ); ?>><?php _e( 'Yes', 'payment-methods' ); ?></option>
+				<option value="false"<?php selected( $instance['tooltip'], 'false' ); ?>><?php _e( 'No', 'woocommerce-payment-methods' ); ?></option>
+				<option value="true"<?php selected( $instance['tooltip'], 'true' ); ?>><?php _e( 'Yes', 'woocommerce-payment-methods' ); ?></option>
 			</select>
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'placement' ); ?>"><?php _e( 'Placement', 'payment-methods' ); ?>:</label>
+			<label for="<?php echo $this->get_field_id( 'placement' ); ?>"><?php _e( 'Placement', 'woocommerce-payment-methods' ); ?>:</label>
 			<select name="<?php echo $this->get_field_name( 'placement' ); ?>" class="widefat" id="<?php echo $this->get_field_id( 'placement' ); ?>">
-				<option value="top"<?php selected( $instance['placement'], 'top' ); ?>><?php _e( 'Top', 'payment-methods' ); ?></option>
-				<option value="right"<?php selected( $instance['placement'], 'right' ); ?>><?php _e( 'Right', 'payment-methods' ); ?></option>
-				<option value="bottom"<?php selected( $instance['placement'], 'bottom' ); ?>><?php _e( 'Bottom', 'payment-methods' ); ?></option>
-				<option value="left"<?php selected( $instance['placement'], 'left' ); ?>><?php _e( 'Left', 'payment-methods' ); ?></option>
+				<option value="top"<?php selected( $instance['placement'], 'top' ); ?>><?php _e( 'Top', 'woocommerce-payment-methods' ); ?></option>
+				<option value="right"<?php selected( $instance['placement'], 'right' ); ?>><?php _e( 'Right', 'woocommerce-payment-methods' ); ?></option>
+				<option value="bottom"<?php selected( $instance['placement'], 'bottom' ); ?>><?php _e( 'Bottom', 'woocommerce-payment-methods' ); ?></option>
+				<option value="left"<?php selected( $instance['placement'], 'left' ); ?>><?php _e( 'Left', 'woocommerce-payment-methods' ); ?></option>
 			</select>
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id('xclass'); ?>"><?php _e( 'Extra classes', 'payment-methods' ); ?>:</label>
+			<label for="<?php echo $this->get_field_id('xclass'); ?>"><?php _e( 'Extra classes', 'woocommerce-payment-methods' ); ?>:</label>
 			<input class="widefat" id="<?php echo $this->get_field_id('xclass'); ?>" name="<?php echo $this->get_field_name('xclass'); ?>" type="text" value="<?php echo esc_attr( $instance['xclass'] ); ?>" />
 		</p>
 		<?php

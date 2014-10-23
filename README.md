@@ -1,4 +1,4 @@
-WooCommerce Payment Methods 0.2.1
+WooCommerce Payment Methods 0.3.0
 =================================
 
 Easily display your accepted payment methods

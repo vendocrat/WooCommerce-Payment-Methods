@@ -1,0 +1,111 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Payment Methods\n"
+"POT-Creation-Date: 2014-10-23 18:12+0100\n"
+"PO-Revision-Date: 2014-10-23 18:12+0100\n"
+"Last-Translator: \n"
+"Language-Team: vendocrat <hello@vendocr.at>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.7\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../classes/class-wc-payment-methods.php:60
+msgid "Bank Transfer"
+msgstr "Trasferimento bancario"
+
+#: ../classes/class-wc-payment-methods.php:65
+msgid "Cash"
+msgstr "Contanti"
+
+#: ../classes/class-wc-payment-methods.php:66
+msgid "Cash on Delivery"
+msgstr "Pagamento con contrassegno"
+
+#: ../classes/class-wc-payment-methods.php:69
+msgid "Pay with Cheque"
+msgstr "Paga con assegno"
+
+#: ../classes/class-wc-payment-methods.php:71
+msgid "Credit Card"
+msgstr "Carta di credito"
+
+#: ../classes/class-wc-payment-methods.php:76
+#: ../classes/class-wc-payment-methods.php:77
+#: ../classes/class-wc-payment-methods.php:83
+#: ../classes/class-wc-payment-methods.php:95
+msgid "Invoice"
+msgstr "Fatture"
+
+#: ../classes/class-widget-wc-payment-methods.php:33
+msgid "Payment Methods"
+msgstr "Metodi di pagamento"
+
+#: ../classes/class-widget-wc-payment-methods.php:34
+msgid "Easily display your accepted payment methods"
+msgstr "Mostra con facilità i tuoi metodi di pagamento accettati"
+
+#: ../classes/class-widget-wc-payment-methods.php:35
+msgid "Accepted Payment Methods"
+msgstr "Metodi di pagamento accettati"
+
+#: ../classes/class-widget-wc-payment-methods.php:107
+msgid "Title"
+msgstr "Titolo"
+
+#: ../classes/class-widget-wc-payment-methods.php:111
+msgid "Style"
+msgstr "Stile"
+
+#: ../classes/class-widget-wc-payment-methods.php:113
+msgid "Default"
+msgstr "Predefinito"
+
+#: ../classes/class-widget-wc-payment-methods.php:114
+msgid "Inverse"
+msgstr "Inverso"
+
+#: ../classes/class-widget-wc-payment-methods.php:115
+msgid "Outline"
+msgstr "Contorno"
+
+#: ../classes/class-widget-wc-payment-methods.php:119
+msgid "Add Tooltip markup?"
+msgstr "Aggiungere Tooltip markup?"
+
+#: ../classes/class-widget-wc-payment-methods.php:121
+msgid "No"
+msgstr "No"
+
+#: ../classes/class-widget-wc-payment-methods.php:122
+msgid "Yes"
+msgstr "Si"
+
+#: ../classes/class-widget-wc-payment-methods.php:126
+msgid "Placement"
+msgstr "Posizione"
+
+#: ../classes/class-widget-wc-payment-methods.php:128
+msgid "Top"
+msgstr "Sopra"
+
+#: ../classes/class-widget-wc-payment-methods.php:129
+msgid "Right"
+msgstr "Destra"
+
+#: ../classes/class-widget-wc-payment-methods.php:130
+msgid "Bottom"
+msgstr "Abbasso"
+
+#: ../classes/class-widget-wc-payment-methods.php:131
+msgid "Left"
+msgstr "Sinistra"
+
+#: ../classes/class-widget-wc-payment-methods.php:135
+msgid "Extra classes"
+msgstr "Classi extra"

@@ -51,7 +51,6 @@ class vendocrat_WC_Payment_Methods {
 
 		// load text domain
 		$this->load_plugin_textdomain();
-	//	add_action( 'plugins_loaded', array( &$this, 'load_plugin_textdomain' ) );
 
 		$this->available_methods = array(
 			'amazon'			=> 'Amazon',
@@ -120,6 +119,7 @@ class vendocrat_WC_Payment_Methods {
 
 		// add shortcode
 		add_shortcode( 'v_woo_payment_methods', array( &$this, 'get_payment_methods' ) );
+		add_shortcode( 'wc_payment_methods',    array( &$this, 'get_payment_methods' ) );
 	}
 
 	/**

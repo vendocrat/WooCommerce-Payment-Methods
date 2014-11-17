@@ -88,6 +88,7 @@ class vendocrat_WC_Payment_Methods {
 			'ogone'				=> 'Ogone',
 			'paybox'			=> 'Paybox',
 			'paylife'			=> 'Paylife',
+			'paymill'			=> 'Paymill',
 			'paypal'			=> 'PayPal',
 			'paysafecard'		=> 'paysafecard',
 			'postepay'			=> 'postepay',
@@ -333,6 +334,17 @@ class vendocrat_WC_Payment_Methods {
 						$methods.= ' cheque';
 						break;
 
+					case 'paymill' :
+						$methods.= ' paymill';
+						$methods.= ' credit-card';
+						$methods.= ' visa';
+						$methods.= ' mastercard';
+						$methods.= ' american-express';
+						$methods.= ' discover';
+						$methods.= ' diners';
+						$methods.= ' jcb';
+						break;
+
 					case 'paypal' :
 						$methods.= ' credit-card';
 						$methods.= ' paypal';
@@ -368,7 +380,7 @@ class vendocrat_WC_Payment_Methods {
 						} else {
 							$wirecard_gateways_subscription = array();
 						}
-							
+
 						$wirecard_gateways = array_merge( $wirecard_gateways, $wirecard_gateways_subscription );
 
 						if ( count($wirecard_gateways) > 0 ) {
@@ -387,6 +399,17 @@ class vendocrat_WC_Payment_Methods {
 
 									case 'idl' :
 										$methods.= ' ideal';
+										break;
+
+									case 'paymill' :
+										$methods.= ' paymill';
+										$methods.= ' credit-card';
+										$methods.= ' visa';
+										$methods.= ' mastercard';
+										$methods.= ' american-express';
+										$methods.= ' discover';
+										$methods.= ' diners';
+										$methods.= ' jcb';
 										break;
 
 									case 'paypal' :

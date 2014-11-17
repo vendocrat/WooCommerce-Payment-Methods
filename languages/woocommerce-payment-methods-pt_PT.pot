@@ -16,96 +16,96 @@ msgstr ""
 "X-Poedit-SearchPath-0: ..\n"
 
 #: ../classes/class-wc-payment-methods.php:60
-msgid "Transferência Bancária"
+msgid "Bank Transfer"
 msgstr ""
 
 #: ../classes/class-wc-payment-methods.php:65
-msgid "Dinheiro"
+msgid "Cash"
 msgstr ""
 
 #: ../classes/class-wc-payment-methods.php:66
-msgid "Contra Entrega"
+msgid "Cash on Delivery"
 msgstr ""
 
 #: ../classes/class-wc-payment-methods.php:69
-msgid "Cheque"
+msgid "Pay with Cheque"
 msgstr ""
 
 #: ../classes/class-wc-payment-methods.php:71
-msgid "Cartão de Crédito"
+msgid "Credit Card"
 msgstr ""
 
 #: ../classes/class-wc-payment-methods.php:76
 #: ../classes/class-wc-payment-methods.php:77
 #: ../classes/class-wc-payment-methods.php:83
 #: ../classes/class-wc-payment-methods.php:95
-msgid "Factura"
+msgid "Invoice"
 msgstr ""
 
 #: ../classes/class-widget-wc-payment-methods.php:33
-msgid "Métodos de Pagamento"
+msgid "Payment Methods"
 msgstr ""
 
 #: ../classes/class-widget-wc-payment-methods.php:34
-msgid "Apresente facilmente os métodos de pagamento disponíveis"
+msgid "Easily display your accepted payment methods"
 msgstr ""
 
 #: ../classes/class-widget-wc-payment-methods.php:35
-msgid "Métodos de Pagamento Aceites"
+msgid "Accepted Payment Methods"
 msgstr ""
 
 #: ../classes/class-widget-wc-payment-methods.php:107
-msgid "Título"
+msgid "Title"
 msgstr ""
 
 #: ../classes/class-widget-wc-payment-methods.php:111
-msgid "Estilos"
+msgid "Style"
 msgstr ""
 
 #: ../classes/class-widget-wc-payment-methods.php:113
-msgid "Normal"
+msgid "Default"
 msgstr ""
 
 #: ../classes/class-widget-wc-payment-methods.php:114
-msgid "Invertido"
+msgid "Inverse"
 msgstr ""
 
 #: ../classes/class-widget-wc-payment-methods.php:115
-msgid "Contorno"
+msgid "Outline"
 msgstr ""
 
 #: ../classes/class-widget-wc-payment-methods.php:119
-msgid "Adicionar código para Tooltip?"
+msgid "Add Tooltip markup?"
 msgstr ""
 
 #: ../classes/class-widget-wc-payment-methods.php:121
-msgid "Não"
+msgid "No"
 msgstr ""
 
 #: ../classes/class-widget-wc-payment-methods.php:122
-msgid "Sim"
+msgid "Yes"
 msgstr ""
 
 #: ../classes/class-widget-wc-payment-methods.php:126
-msgid "Posicionamento"
+msgid "Placement"
 msgstr ""
 
 #: ../classes/class-widget-wc-payment-methods.php:128
-msgid "Topo"
+msgid "Top"
 msgstr ""
 
 #: ../classes/class-widget-wc-payment-methods.php:129
-msgid "Direita"
+msgid "Right"
 msgstr ""
 
 #: ../classes/class-widget-wc-payment-methods.php:130
-msgid "Inferior"
+msgid "Bottom"
 msgstr ""
 
 #: ../classes/class-widget-wc-payment-methods.php:131
-msgid "Esquerda"
+msgid "Left"
 msgstr ""
 
 #: ../classes/class-widget-wc-payment-methods.php:135
-msgid "Classes Extra"
+msgid "Extra classes"
 msgstr ""

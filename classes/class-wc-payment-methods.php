@@ -6,7 +6,7 @@
  * @subpackage	Payment Methods
  *
  * @since		2014-09-08
- * @version		2014-10-21
+ * @version		2014-12-17
  *
  * @author		Poellmann Alexander Manfred <alex@vendocr.at>
  * @copyright	Copyright 2014 vendocrat. All Rights Reserved.
@@ -65,7 +65,7 @@ class vendocrat_WC_Payment_Methods {
 			'cash-on-delivery'	=> __( 'Cash on Delivery', 'woocommerce-payment-methods' ),
 			'cb'				=> 'CB',
 			'cirrus'			=> 'Cirrus',
-			'cheque'			=> __( 'Pay with Cheque', 'woocommerce-payment-methods' ),
+		//	'cheque'			=> __( 'Pay with Cheque', 'woocommerce-payment-methods' ),
 			'clickandbuy'		=> 'ClickAndBuy',
 			'credit-card'		=> __( 'Credit Card', 'woocommerce-payment-methods' ),
 			'diners'			=> 'Diners Club',
@@ -196,7 +196,7 @@ class vendocrat_WC_Payment_Methods {
 		}
 		wp_enqueue_style( 'vendocrat-paymentfont' );
 
-		wp_register_style( 'payment-methods', WC_PAYMENT_METHODS_CSS_URI .'payment-methods.css', array(), false, 'all' );
+		wp_register_style( 'payment-methods', WC_PAYMENT_METHODS_CSS_URI .'payment-methods.min.css', array(), false, 'all' );
 		wp_enqueue_style( 'payment-methods' );
 	}
 
@@ -369,13 +369,13 @@ class vendocrat_WC_Payment_Methods {
 					case 'wirecard' :
 						$options = get_option('woocommerce_wirecard_settings');
 
-						if ( is_array( $options['paymenttype_available'] ) ) {
+						if ( array_key_exists( 'paymenttype_available', $options ) AND is_array( $options['paymenttype_available'] ) ) {
 							$wirecard_gateways = $options['paymenttype_available'];
 						} else {
 							$wirecard_gateways = array();
 						}
 
-						if ( is_array( $options['subs_paymenttype_options'] ) ) {
+						if ( array_key_exists( 'subs_paymenttype_options', $options ) AND is_array( $options['subs_paymenttype_options'] ) ) {
 							$wirecard_gateways_subscription = $options['subs_paymenttype_options'];
 						} else {
 							$wirecard_gateways_subscription = array();
@@ -474,7 +474,7 @@ class vendocrat_WC_Payment_Methods {
 						break;
 
 					case 'amazon' :
-					case 'amazon-fps' :
+					case 'amazon_fps' :
 						$methods.= ' amazon';
 						break;
 

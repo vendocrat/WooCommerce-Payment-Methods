@@ -1,8 +1,8 @@
 /**
- * PaymentFont Styles 0.1.0
+ * PaymentFont Styles 1.0.0
  *
  * @since     2014-09-21
- * @version   2014-09-22
+ * @version   2014-12-17
  *
  * @author    Poellmann Alexander Manfred <alex@vendocr.at>
  * @copyright Copyright 2014 vendocrat. All Rights Reserved.
@@ -113,7 +113,8 @@
 .pf-giropay:before {
 	content: "\f01b";
 }
-.pf-gittip:before {
+.pf-gittip:before,
+.pf-gratipay:before {
 	content: "\f01c";
 }
 .pf-google-wallet:before {
@@ -250,6 +251,66 @@
 }
 .pf-wirecard:before {
 	content: "\f049";
+}
+.pf-sepa:before {
+	content: "\f04a";
+}
+.pf-sepa-alt:before {
+	content: "\f04b";
+}
+.pf-apple-pay:before {
+	content: "\f04c";
+}
+.pf-interac:before {
+	content: "\f04d";
+}
+.pf-paymill:before {
+	content: "\f04e";
+}
+.pf-dankort:before {
+	content: "\f04f";
+}
+.pf-bancontact-mister-cash:before {
+	content: "\f050";
+}
+.pf-moip:before {
+	content: "\f051";
+}
+.pf-pagseguro:before {
+	content: "\f052";
+}
+.pf-cash-on-pickup:before {
+	content: "\f053";
+}
+.pf-sage:before {
+	content: "\f054";
+}
+.pf-elo:before {
+	content: "\f055";
+}
+.pf-elo-alt:before {
+	content: "\f056";
+}
+.pf-payu:before {
+	content: "\f057";
+}
+.pf-mercado-pago:before {
+	content: "\f058";
+}
+.pf-mercado-pago-sign:before {
+	content: "\f059";
+}
+.pf-payshop:before {
+	content: "\f05a";
+}
+.pf-multibanco:before {
+	content: "\f05b";
+}
+.pf-gratipay-sign:before {
+	content: "\f05c";
+}
+.pf-six:before {
+	content: "\f05d";
 }
 
 /*

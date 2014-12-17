@@ -1,9 +1,11 @@
-WooCommerce Payment Methods 0.3.0
+WooCommerce Payment Methods 1.0.0
 =================================
 
 Easily display your accepted payment methods
 
-![alt tag](https://github.com/vendocrat/WooCommerce-Payment-Methods/blob/master/screenshot-1.png)
+![WooCommerce Payment Methods Screenshot 1](https://github.com/vendocrat/WooCommerce-Payment-Methods/blob/master/screenshot-1.png)
+
+![WooCommerce Payment Methods Screenshot 4](https://github.com/vendocrat/WooCommerce-Payment-Methods/blob/master/screenshot-4.png)
 
 ##Description
 
@@ -28,6 +30,7 @@ Translations included:
 *   English
 *   German
 *   Italian
+*   Portoguese (thanks to [Luis Martins](https://github.com/lmartins).
 
 Please contact us via [Twitter](https://twitter.com/vendocrat) or hit us on [GitHub](https://github.com/vendocrat/), if you have a translation you want to contribute!
 
@@ -38,3 +41,5 @@ See "readme.txt".
 **Handcrafted with love by [vendocrat](http://vendocr.at/) in Vienna &amp; Rome.**
 
 Follow us on [Twitter](https://twitter.com/vendocrat), like us on [Facebook](https://www.facebook.com/vendocrat), circle us on [Google+](https://plus.google.com/+vendocrat) or fork us on [GitHub](https://github.com/vendocrat)!
+
+[![Analytics](https://ga-beacon.appspot.com/UA-57742328-1/vendocrat/WooCommerce-Payment-Methods)](https://github.com/igrigorik/ga-beacon)

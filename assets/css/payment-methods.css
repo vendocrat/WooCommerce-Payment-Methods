@@ -5,7 +5,7 @@
  * @subpackage	Payment Methods
  *
  * @since		2014-09-08
- * @version		2014-10-21
+ * @version		2014-12-17
  *
  * @author		Poellmann Alexander Manfred <alex@vendocr.at>
  * @copyright	Copyright 2014 vendocrat. All Rights Reserved.
@@ -62,6 +62,9 @@
 #payment ul.payment_methods .payment_method_stripe label img,
 #payment ul.payment_methods .payment_method_wirecard label img,
 #payment ul.payment_methods .payment_method_wirecard_checkout_page label img,
+#payment ul.payment_methods .payment_method_amazon > label img,
+#payment ul.payment_methods .payment_method_amazon_fps > label img,
+#payment ul.payment_methods .payment_method_pbx > label img,
 #payment ul.payment_methods .payment_method_ClickAndBuy label img,
 #payment ul.payment_methods .payment_method_sofortgateway label img,
 #payment ul.payment_methods .payment_method_cash_on_delivery label img,
@@ -78,6 +81,8 @@
 #payment ul.payment_methods .payment_method_wirecard > label:before,
 #payment ul.payment_methods .payment_method_wirecard > .payment_method_select > label:before,
 #payment ul.payment_methods .payment_method_wirecard_checkout_page > label:before,
+#payment ul.payment_methods .payment_method_amazon > label:before,
+#payment ul.payment_methods .payment_method_amazon_fps > label:before,
 #payment ul.payment_methods .payment_method_pbx > label:before,
 #payment ul.payment_methods .payment_method_ClickAndBuy > label:before,
 #payment ul.payment_methods .payment_method_sofortgateway > label:before,
@@ -123,6 +128,10 @@
 	#payment ul.payment_methods .payment_method_wirecard > .payment_method_select > label:before,
 	#payment ul.payment_methods .payment_method_wirecard_checkout_page > label:before {
 		content:'\f049';}
+
+	#payment ul.payment_methods .payment_method_amazon > label:before,
+	#payment ul.payment_methods .payment_method_amazon_fps > label:before {
+		content:'\f000';}
 
 	#payment ul.payment_methods .payment_method_pbx > label:before {
 		content:'\f031';}

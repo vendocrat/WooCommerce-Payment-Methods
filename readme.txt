@@ -33,7 +33,7 @@ Translations included:
 *   English
 *   German
 *   Italian
-*   Portoguese (thanks to [Luis Martins](https://github.com/lmartins).
+*   Portuguese (thanks to [Luis Martins](https://github.com/lmartins).
 
 Please contact us via [Twitter](https://twitter.com/vendocrat) or hit us on [GitHub](https://github.com/vendocrat/WooCommerce-Payment-Methods), if you have a translation you want to contribute!
 
@@ -81,4 +81,4 @@ Added CSS to replace payment provider images on WooCommerce Checkout with Paymen
 Improved payment gateway function. Partial rewrite to fit our internal plugin standard. Improved l10n handling.
 
 = 1.0.0 =
-Minor fixes, updated PaymentFont and included portoguese translation (thanks Luis Martins)
+Minor fixes, updated PaymentFont and included Portuguese translation (thanks Luis Martins)

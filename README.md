@@ -30,7 +30,7 @@ Translations included:
 *   English
 *   German
 *   Italian
-*   Portoguese (thanks to [Luis Martins](https://github.com/lmartins).
+*   Portuguese (thanks to [Luis Martins](https://github.com/lmartins).
 
 Please contact us via [Twitter](https://twitter.com/vendocrat) or hit us on [GitHub](https://github.com/vendocrat/), if you have a translation you want to contribute!
 

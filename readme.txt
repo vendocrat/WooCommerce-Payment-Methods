@@ -4,7 +4,7 @@ Donate link:       http://vendocr.at/donate/
 Tags:              woocommerce, credit card, logo, payment
 Requires at least: 3.5
 Tested up to:      4.1
-Stable tag:        0.3.0
+Stable tag:        1.0.0
 License:           GNU General Public License v3.0
 License URI:       http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -33,6 +33,7 @@ Translations included:
 *   English
 *   German
 *   Italian
+*   Portoguese (thanks to [Luis Martins](https://github.com/lmartins).
 
 Please contact us via [Twitter](https://twitter.com/vendocrat) or hit us on [GitHub](https://github.com/vendocrat/WooCommerce-Payment-Methods), if you have a translation you want to contribute!
 
@@ -78,3 +79,6 @@ Added CSS to replace payment provider images on WooCommerce Checkout with Paymen
 
 = 0.3.0 =
 Improved payment gateway function. Partial rewrite to fit our internal plugin standard. Improved l10n handling.
+
+= 1.0.0 =
+Minor fixes, updated PaymentFont and included portoguese translation (thanks Luis Martins)

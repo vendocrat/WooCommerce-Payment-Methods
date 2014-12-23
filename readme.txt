@@ -4,7 +4,7 @@ Donate link:       http://vendocr.at/donate/
 Tags:              woocommerce, credit card, logo, payment
 Requires at least: 3.5
 Tested up to:      4.1
-Stable tag:        1.0.0
+Stable tag:        1.0.1
 License:           GNU General Public License v3.0
 License URI:       http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -33,9 +33,14 @@ Translations included:
 *   English
 *   German
 *   Italian
+*   Greek (thanks to [Anestis Samourkasidis](https://wordpress.org/support/profile/samourkasidis))
 *   Portuguese (thanks to [Luis Martins](https://github.com/lmartins))
 
-Please contact us via [Twitter](https://twitter.com/vendocrat) or hit us on [GitHub](https://github.com/vendocrat/WooCommerce-Payment-Methods), if you have a translation you want to contribute!
+All our plugins are fully localized/translateable by default and include a .pot-file! Please contact us via [Twitter](https://twitter.com/vendocrat) or hit us on [GitHub](https://github.com/vendocrat), if you have a translation you want to contribute!
+
+= We'd love to hear from you! =
+
+Follow us on [Twitter](https://twitter.com/vendocrat), like us on [Facebook](https://www.facebook.com/vendocrat), circle us on [Google+](https://plus.google.com/+vendocrat) or fork us on [GitHub](https://github.com/vendocrat)!
 
 == Installation ==
 
@@ -82,3 +87,6 @@ Improved payment gateway function. Partial rewrite to fit our internal plugin st
 
 = 1.0.0 =
 Minor fixes, updated PaymentFont and included Portuguese translation (thanks Luis Martins).
+
+= 1.0.1 =
+Minor fixes, added Greek translation (thanks to Anestis Samourkasidis).

@@ -1,0 +1,119 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: vendocrat-server-monitor\n"
+"POT-Creation-Date: 2014-12-20 20:52+0100\n"
+"PO-Revision-Date: 2014-12-22 10:26+0200\n"
+"Last-Translator: Anestis <anestis@samourkasidis.com>\n"
+"Language-Team: Anestis Samourkasidis\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.11\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../classes/class-server-monitor.php:124
+#, php-format
+msgid "%s: General"
+msgstr "%s: Γενικά"
+
+#: ../classes/class-server-monitor.php:124
+#: ../classes/class-server-monitor.php:130
+msgid "Server Monitor"
+msgstr "Παρακολούθηση Διακομιστή"
+
+#: ../classes/class-server-monitor.php:130
+#, php-format
+msgid "%s: PHP &amp; Database"
+msgstr "%s: PHP &amp; Βάση Δεδομένων"
+
+#: ../classes/class-server-monitor.php:136
+msgid "System Status"
+msgstr "Κατάσταση συστήματος"
+
+#: ../classes/class-server-monitor.php:215
+#: ../classes/class-server-monitor.php:317
+#: ../classes/class-server-monitor.php:318
+#: ../classes/class-server-monitor.php:319
+#: ../classes/class-server-monitor.php:320
+#: ../classes/class-server-monitor.php:354
+#: ../classes/class-server-monitor.php:368
+msgid "N/A"
+msgstr "Μη διαθέσιμο"
+
+#: ../classes/class-server-monitor.php:220
+msgid "Host Name"
+msgstr "Ονομα Host"
+
+#: ../classes/class-server-monitor.php:221
+msgid "Server IP"
+msgstr "IP Διακομιστή"
+
+#: ../classes/class-server-monitor.php:222
+msgid "Server Path"
+msgstr "Διαδρομή Διακομιστή"
+
+#: ../classes/class-server-monitor.php:225
+msgid "Server Load"
+msgstr "Φόρτος Διακομιστή"
+
+#: ../classes/class-server-monitor.php:229
+msgid "Server up since"
+msgstr "Ανοιχτός εδώ και"
+
+#: ../classes/class-server-monitor.php:232
+msgid "Server Info"
+msgstr "Πληροφορίες Διακομιστή"
+
+#: ../classes/class-server-monitor.php:253
+msgid "PHP Version"
+msgstr "Εκδοση PHP"
+
+#: ../classes/class-server-monitor.php:256
+msgid "PHP Time Limit"
+msgstr "χρονικό όριο PHP"
+
+#: ../classes/class-server-monitor.php:259
+msgid "MySQL Version"
+msgstr "Εκδοση MySQL"
+
+#: ../classes/class-server-monitor.php:260
+msgid "Database Size"
+msgstr "Μέγεθος Βάσης"
+
+#: ../classes/class-server-monitor.php:281
+msgid "WordPress Version"
+msgstr "Έκδοση Wordpress"
+
+#: ../classes/class-server-monitor.php:282
+msgid "Multisite?"
+msgstr "Πολλαπλά site;"
+
+#: ../classes/class-server-monitor.php:283
+msgid "Active Plugins"
+msgstr "Ενεργά πρόσθετα"
+
+#: ../classes/class-server-monitor.php:286
+msgid "Debug Mode"
+msgstr "Λειτουργία εντοπισμού σφαλμάτων"
+
+#: ../classes/class-server-monitor.php:287
+msgid "Language"
+msgstr "Γλώσσα"
+
+#: ../classes/class-server-monitor.php:288
+msgid "Timezone"
+msgstr "Ζώνη ώρας"
+
+#: ../classes/class-server-monitor.php:328
+#: ../classes/class-server-monitor.php:332
+msgid "Yes"
+msgstr "Ναί"
+
+#: ../classes/class-server-monitor.php:328
+#: ../classes/class-server-monitor.php:332
+msgid "No"
+msgstr "Όχι"

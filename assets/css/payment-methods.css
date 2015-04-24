@@ -5,11 +5,11 @@
  * @subpackage	Payment Methods
  *
  * @since		2014-09-08
- * @version		2014-12-17
+ * @version		2015-04-24
  *
- * @author		Poellmann Alexander Manfred <alex@vendocr.at>
- * @copyright	Copyright 2014 vendocrat. All Rights Reserved.
- * @link		http://vendocr.at/
+ * @author		Poellmann Alexander Manfred (@AMPoellmann)
+ * @copyright	Copyright 2015 vendocrat. All Rights Reserved.
+ * @link		https://vendocr.at/
  */
 
 /**** Base Styles */
@@ -29,10 +29,12 @@
 			cursor:default;
 			padding:4px;
 
-			border-radius:4px;
+			font-size:1.5em;
+			line-height:1;
 
 			background:transparent;
-			border:1px solid transparent;}
+			border:1px solid transparent;
+			border-radius:4px;}
 
 		.payment-methods-inverse > li > i,
 		.payment-methods-i > li > i {
@@ -43,10 +45,6 @@
 		.payment-methods-outline > li > i,
 		.payment-methods-o > li > i {
 			border-color:#777;}
-
-			.payment-methods > li > i {
-				font-size:1.5em;
-				line-height:1;}
 
 /**** Widget */
 .widget_vendocrat_payment_methods {}

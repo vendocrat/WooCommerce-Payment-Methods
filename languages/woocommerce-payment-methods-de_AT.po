@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce Payment Methods\n"
-"POT-Creation-Date: 2014-10-23 18:11+0100\n"
-"PO-Revision-Date: 2014-10-23 18:11+0100\n"
+"POT-Creation-Date: 2015-04-24 19:44+0100\n"
+"PO-Revision-Date: 2015-04-24 19:46+0100\n"
 "Last-Translator: \n"
 "Language-Team: vendocrat <hello@vendocr.at>\n"
 "Language: de\n"
@@ -15,34 +15,35 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../classes/class-wc-payment-methods.php:60
+#: ../classes/class-wc-payment-methods.php:59
 msgid "Bank Transfer"
 msgstr "Bank-Überweisung"
 
-#: ../classes/class-wc-payment-methods.php:65
+#: ../classes/class-wc-payment-methods.php:64
 msgid "Cash"
 msgstr "Bargeld"
 
-#: ../classes/class-wc-payment-methods.php:66
+#: ../classes/class-wc-payment-methods.php:65
 msgid "Cash on Delivery"
 msgstr "Nachname"
 
-#: ../classes/class-wc-payment-methods.php:69
-msgid "Pay with Cheque"
-msgstr "Mit Scheck bezahlen"
-
-#: ../classes/class-wc-payment-methods.php:71
+#: ../classes/class-wc-payment-methods.php:70
 msgid "Credit Card"
 msgstr "Kreditkarte"
 
+#: ../classes/class-wc-payment-methods.php:75
 #: ../classes/class-wc-payment-methods.php:76
-#: ../classes/class-wc-payment-methods.php:77
-#: ../classes/class-wc-payment-methods.php:83
+#: ../classes/class-wc-payment-methods.php:82
 #: ../classes/class-wc-payment-methods.php:95
 msgid "Invoice"
 msgstr "Rechnung"
 
+#: ../classes/class-wc-payment-methods.php:270
+msgid "No Payment Methods available or specified."
+msgstr "Keine Zahlungsarten verfügbar oder angegeben."
+
 #: ../classes/class-widget-wc-payment-methods.php:33
+#: ../classes/class-widget-wc-payment-methods.php:139
 msgid "Payment Methods"
 msgstr "Zahlungsmethoden"
 
@@ -109,3 +110,29 @@ msgstr "Links"
 #: ../classes/class-widget-wc-payment-methods.php:135
 msgid "Extra classes"
 msgstr "Zusätzliche Klassen"
+
+#: ../classes/class-widget-wc-payment-methods.php:141
+msgid "Optional"
+msgstr "Optional"
+
+#: ../classes/class-widget-wc-payment-methods.php:141
+#, php-format
+msgid ""
+"Specify payment methods to be shown manually by entering their slugs comma "
+"separated (eg. \"paypal,visa,mastercard\" for PayPal, Visa and MasterCard). "
+"See %s for available payment methods an their slugs! If left blank the "
+"widget will try to automatically fetch available payment methods from "
+"WooCommerce."
+msgstr ""
+"Definiere die anzuzeigenden Zahlungsmethoden indem du deren Slugs koma-"
+"separiert eingibst (z.B. \"paypal,visa,mastercard\" für PayPal, Visa und "
+"MasterCard). Die verfügbaren Zahlungsarten und deren Slugs findest du unter "
+"%s! Wenn du das Feld leer lässt, wird das Widget versuchen die verfügbaren "
+"Zahlungsarten automatisch von WooCommerce zu übernehmen."
+
+#, fuzzy
+#~ msgid "Methods"
+#~ msgstr "Zahlungsmethoden"
+
+#~ msgid "Pay with Cheque"
+#~ msgstr "Mit Scheck bezahlen"

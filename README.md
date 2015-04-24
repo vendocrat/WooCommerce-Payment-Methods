@@ -1,4 +1,4 @@
-WooCommerce Payment Methods 1.0.1
+WooCommerce Payment Methods 1.1.2
 =================================
 
 Easily display your accepted payment methods
@@ -9,7 +9,7 @@ Easily display your accepted payment methods
 
 ##Description
 
-WooCommerce Payment Methods allows you to display your accepted payment methods. By default the plugin shows all available payment methods, but you can also specify them manually.
+WooCommerce Payment Methods allows you to display your accepted payment methods. By default the plugin shows all available payment methods, but you can also specify or override them manually.
 
 You can display them via shortcode, widget or template tag in three available styles (default, inverse and outline). We've added several classes, so you can easily style the output to your pleasure.
 

@@ -2,15 +2,15 @@
 /**
  * Payment Methods widget
  *
- * @package		vendocrat
- * @subpackage	Payment Methods
+ * @package    vendocrat
+ * @subpackage Payment Methods
  *
- * @since		2014-09-08
- * @version		2014-10-21
+ * @since      2014-09-08
+ * @version    2015-04-24
  *
- * @author		Poellmann Alexander Manfred <alex@vendocr.at>
- * @copyright	Copyright 2014 vendocrat. All Rights Reserved.
- * @link		http://vendocr.at/
+ * @author     Poellmann Alexander Manfred (@AMPoellmann)
+ * @copyright  Copyright 2015 vendocrat. All Rights Reserved.
+ * @link       https://vendocr.at/
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -134,6 +134,11 @@ class vendocrat_Widget_WC_Payment_Methods extends WP_Widget {
 		<p>
 			<label for="<?php echo $this->get_field_id('xclass'); ?>"><?php _e( 'Extra classes', 'woocommerce-payment-methods' ); ?>:</label>
 			<input class="widefat" id="<?php echo $this->get_field_id('xclass'); ?>" name="<?php echo $this->get_field_name('xclass'); ?>" type="text" value="<?php echo esc_attr( $instance['xclass'] ); ?>" />
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id('methods'); ?>"><?php _e( 'Payment Methods', 'woocommerce-payment-methods' ); ?>:</label>
+			<input class="widefat" id="<?php echo $this->get_field_id('methods'); ?>" name="<?php echo $this->get_field_name('methods'); ?>" type="text" value="<?php echo esc_attr( $instance['methods'] ); ?>" />
+			<i><?php echo '<strong>'. __( 'Optional', 'woocommerce-payment-methods' ) . ':</strong> ' . sprintf( __( 'Specify payment methods to be shown manually by entering their slugs comma separated (eg. "paypal,visa,mastercard" for PayPal, Visa and MasterCard). See %s for available payment methods an their slugs! If left blank the widget will try to automatically fetch available payment methods from WooCommerce.', 'woocommerce-payment-methods' ), '<a href="http://paymentfont.io" target="_blank">PaymentFont.io</a>' ); ?></i>
 		</p>
 		<?php
 	}

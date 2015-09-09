@@ -5,11 +5,11 @@
  * @subpackage	Payment Methods
  *
  * @since		2014-09-08
- * @version		2014-10-21
+ * @version		2015-04-24
  *
- * @author		Poellmann Alexander Manfred <alex@vendocr.at>
- * @copyright	Copyright 2014 vendocrat. All Rights Reserved.
- * @link		http://vendocr.at/
+ * @author		Poellmann Alexander Manfred (@AMPoellmann)
+ * @copyright	Copyright 2015 vendocrat. All Rights Reserved.
+ * @link		https://vendocr.at/
  */
 
 /**** Base Styles */
@@ -29,10 +29,12 @@
 			cursor:default;
 			padding:4px;
 
-			border-radius:4px;
+			font-size:1.5em;
+			line-height:1;
 
 			background:transparent;
-			border:1px solid transparent;}
+			border:1px solid transparent;
+			border-radius:4px;}
 
 		.payment-methods-inverse > li > i,
 		.payment-methods-i > li > i {
@@ -43,10 +45,6 @@
 		.payment-methods-outline > li > i,
 		.payment-methods-o > li > i {
 			border-color:#777;}
-
-			.payment-methods > li > i {
-				font-size:1.5em;
-				line-height:1;}
 
 /**** Widget */
 .widget_vendocrat_payment_methods {}
@@ -62,6 +60,9 @@
 #payment ul.payment_methods .payment_method_stripe label img,
 #payment ul.payment_methods .payment_method_wirecard label img,
 #payment ul.payment_methods .payment_method_wirecard_checkout_page label img,
+#payment ul.payment_methods .payment_method_amazon > label img,
+#payment ul.payment_methods .payment_method_amazon_fps > label img,
+#payment ul.payment_methods .payment_method_pbx > label img,
 #payment ul.payment_methods .payment_method_ClickAndBuy label img,
 #payment ul.payment_methods .payment_method_sofortgateway label img,
 #payment ul.payment_methods .payment_method_cash_on_delivery label img,
@@ -78,6 +79,8 @@
 #payment ul.payment_methods .payment_method_wirecard > label:before,
 #payment ul.payment_methods .payment_method_wirecard > .payment_method_select > label:before,
 #payment ul.payment_methods .payment_method_wirecard_checkout_page > label:before,
+#payment ul.payment_methods .payment_method_amazon > label:before,
+#payment ul.payment_methods .payment_method_amazon_fps > label:before,
 #payment ul.payment_methods .payment_method_pbx > label:before,
 #payment ul.payment_methods .payment_method_ClickAndBuy > label:before,
 #payment ul.payment_methods .payment_method_sofortgateway > label:before,
@@ -123,6 +126,10 @@
 	#payment ul.payment_methods .payment_method_wirecard > .payment_method_select > label:before,
 	#payment ul.payment_methods .payment_method_wirecard_checkout_page > label:before {
 		content:'\f049';}
+
+	#payment ul.payment_methods .payment_method_amazon > label:before,
+	#payment ul.payment_methods .payment_method_amazon_fps > label:before {
+		content:'\f000';}
 
 	#payment ul.payment_methods .payment_method_pbx > label:before {
 		content:'\f031';}

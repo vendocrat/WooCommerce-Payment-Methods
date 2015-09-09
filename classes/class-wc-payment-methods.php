@@ -2,15 +2,15 @@
 /**
  * Payment Methods
  *
- * @package		vendocrat
- * @subpackage	Payment Methods
+ * @package    vendocrat
+ * @subpackage Payment Methods
  *
- * @since		2014-09-08
- * @version		2014-10-21
+ * @since      2014-09-08
+ * @version    2015-04-24
  *
- * @author		Poellmann Alexander Manfred <alex@vendocr.at>
- * @copyright	Copyright 2014 vendocrat. All Rights Reserved.
- * @link		http://vendocr.at/
+ * @author     Poellmann Alexander Manfred (@AMPoellmann)
+ * @copyright  Copyright 2015 vendocrat. All Rights Reserved.
+ * @link       https://vendocr.at/
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -51,7 +51,6 @@ class vendocrat_WC_Payment_Methods {
 
 		// load text domain
 		$this->load_plugin_textdomain();
-	//	add_action( 'plugins_loaded', array( &$this, 'load_plugin_textdomain' ) );
 
 		$this->available_methods = array(
 			'amazon'			=> 'Amazon',
@@ -66,7 +65,7 @@ class vendocrat_WC_Payment_Methods {
 			'cash-on-delivery'	=> __( 'Cash on Delivery', 'woocommerce-payment-methods' ),
 			'cb'				=> 'CB',
 			'cirrus'			=> 'Cirrus',
-			'cheque'			=> __( 'Pay with Cheque', 'woocommerce-payment-methods' ),
+		//	'cheque'			=> __( 'Pay with Cheque', 'woocommerce-payment-methods' ),
 			'clickandbuy'		=> 'ClickAndBuy',
 			'credit-card'		=> __( 'Credit Card', 'woocommerce-payment-methods' ),
 			'diners'			=> 'Diners Club',
@@ -84,7 +83,8 @@ class vendocrat_WC_Payment_Methods {
 			'jcb'				=> 'JCB',
 			'maestro'			=> 'Maestro',
 			'mastercard'		=> 'MasterCard',
-			'mastercard-securecode' => 'MasterCard Securecode',
+            'mastercard-securecode' => 'MasterCard Securecode',
+            'multibanco'        => 'Multibanco',
 			'ogone'				=> 'Ogone',
 			'paybox'			=> 'Paybox',
 			'paylife'			=> 'Paylife',
@@ -120,6 +120,7 @@ class vendocrat_WC_Payment_Methods {
 
 		// add shortcode
 		add_shortcode( 'v_woo_payment_methods', array( &$this, 'get_payment_methods' ) );
+		add_shortcode( 'wc_payment_methods',    array( &$this, 'get_payment_methods' ) );
 	}
 
 	/**
@@ -196,7 +197,7 @@ class vendocrat_WC_Payment_Methods {
 		}
 		wp_enqueue_style( 'vendocrat-paymentfont' );
 
-		wp_register_style( 'payment-methods', WC_PAYMENT_METHODS_CSS_URI .'payment-methods.css', array(), false, 'all' );
+		wp_register_style( 'payment-methods', WC_PAYMENT_METHODS_CSS_URI .'payment-methods.min.css', array(), false, 'all' );
 		wp_enqueue_style( 'payment-methods' );
 	}
 
@@ -227,14 +228,14 @@ class vendocrat_WC_Payment_Methods {
 	 * Woo Accepted Payment Methods
 	 *
 	 * @since 2014-09-07
-	 * @version 2014-09-21
+	 * @version 2015-04-24
 	 **************************************************/
 	function get_payment_methods( $atts = array(), $content = null ) {
 		extract(
 			shortcode_atts(
 				array(
 					'methods'   => false,     // comma separated list of payment methods icon slugs to be displayed, see http://paymentfont.io for available icons (new since 0.2.0)
-					'style'     => 'default', // default, inverse, o/outline
+					'style'     => 'default', // default, i/inverse, o/outline
 					'tooltip'   => false,     // adds data attributes to icon to be used for diplaying tooltips (made for Bootstrap)
 					'placement' => 'bottom',  // set tooltip placement (new since 0.1.2)
 					'xclass'    => false,     // add any extra classes, seperated by a space
@@ -263,59 +264,71 @@ class vendocrat_WC_Payment_Methods {
 			$methods = array_flip( $methods );
 		}
 
-		if ( count($methods) > 0 ) {
-			// remove duplicate methods
-			$methods = array_unique($methods);
+		// Filter for methods (new as of v1.1.0)
+		$methods = apply_filters( 'vendocrat_filter_wc_payment_methods', $methods );
 
-			// sort array
-			ksort($methods);
+		if ( ! is_array($methods) OR count($methods) <= 0 )
+			return __( 'No Payment Methods available or specified.', 'woocommerce-payment-methods' );
 
-			// let the magic happen
-			$icons = '';
-			foreach ( $methods as $slug ) {
-				$icon = '';
+		// remove duplicate methods
+		$methods = array_unique($methods);
 
-				// continue if we have no corresponding icon
-				if ( ! array_key_exists ( $slug, $this->available_methods ) )
-					continue;
+		// sort array
+		ksort($methods);
 
-				// retrieve title
-				$title = $this->available_methods[$slug];
+		// let the magic happen
+		$icons = '';
+		foreach ( $methods as $slug ) {
+			$icon = '';
 
-				// build icon class
-				$iclass = 'pf pf-'. $slug .' '. $slug;
+			// continue if we have no corresponding icon
+			if ( ! array_key_exists ( $slug, $this->available_methods ) )
+				continue;
 
-				// icon markup
-				$icon = '<i';
-				$icon.= ($iclass) ? ' class="'. esc_attr( trim($iclass) ) .'"' : '';
-				$icon.= ($title)  ? ' title="'. esc_attr( trim($title) ) .'"'  : '';
-				$icon.= ($tooltip AND $placement) ? ' data-toggle="tooltip" data-placement="'. $placement .'"' : '';
-				$icon.= '></i>';
+			// retrieve title
+			$title = $this->available_methods[$slug];
 
-				// wrap in list item tags and append to $icons
-				$icons.= '<li>'. $icon .'</li>';
-			}
+			// build icon class
+			$iclass = 'pf pf-'. $slug .' '. $slug;
 
-			// return $output if we have icons
-			if ( $icons ) {
-				$output = '<ul';
-				$output.= ($class) ? ' class="'. esc_attr( trim($class) ) .'"' : '';
-				$output.= '>'. $icons .'</ul>';
+			// icon markup
+			$icon = '<i';
+			$icon.= ($iclass) ? ' class="'. esc_attr( trim($iclass) ) .'"' : '';
+			$icon.= ($title)  ? ' title="'. esc_attr( trim($title) ) .'"'  : '';
+			$icon.= ($tooltip AND $placement) ? ' data-toggle="tooltip" data-placement="'. $placement .'"' : '';
+			$icon.= '></i>';
 
-				return $output;
-			}
+			// wrap in list item tags and append to $icons
+			$icons.= '<li class="'. esc_attr( trim($slug) ) .'">'. $icon .'</li>';
+		}
+
+		$icons = apply_filters( 'vendocrat_filter_wc_payment_methods_icons', $icons );
+
+		// return $output if we have icons
+		if ( $icons ) {
+			$output = '<ul';
+			$output.= ($class) ? ' class="'. esc_attr( trim($class) ) .'"' : '';
+			$output.= '>'. $icons .'</ul>';
+
+			return $output;
 		}
 	}
 
 	/**
 	 * Get available gateways
 	 *
+	 * @todo refactor automatic display of payment methods, eg. for PayPal & Stripe
+	 *
 	 * @since 2014-09-07
-	 * @version 2014-09-08
+	 * @version 2015-04-24
 	 **************************************************/
 	function get_available_gateways() {
 		$gateways = array();
 		$methods  = '';
+
+		// check dependencies
+		if ( ! in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) )
+			return $gateways;
 
 		if ( $available_gateways = WC()->payment_gateways->get_available_payment_gateways() ) {
 
@@ -336,46 +349,46 @@ class vendocrat_WC_Payment_Methods {
 
 					case 'paymill' :
 						$methods.= ' paymill';
-						$methods.= ' credit-card';
+					/*	$methods.= ' credit-card';
 						$methods.= ' visa';
 						$methods.= ' mastercard';
 						$methods.= ' american-express';
 						$methods.= ' discover';
 						$methods.= ' diners';
-						$methods.= ' jcb';
+						$methods.= ' jcb';*/
 						break;
 
 					case 'paypal' :
-						$methods.= ' credit-card';
+					//	$methods.= ' credit-card';
 						$methods.= ' paypal';
-						$methods.= ' visa';
+					/*	$methods.= ' visa';
 						$methods.= ' mastercard';
 						$methods.= ' american-express';
 						$methods.= ' discover';
 						$methods.= ' diners';
-						$methods.= ' jcb';
+						$methods.= ' jcb';*/
 						break;
 
 					case 'stripe' :
 						$methods.= ' stripe';
-						$methods.= ' visa';
+					/*	$methods.= ' visa';
 						$methods.= ' mastercard';
 						$methods.= ' american-express';
 						$methods.= ' discover';
 						$methods.= ' diners';
-						$methods.= ' jcb';
+						$methods.= ' jcb';*/
 						break;
 
 					case 'wirecard' :
 						$options = get_option('woocommerce_wirecard_settings');
 
-						if ( is_array( $options['paymenttype_available'] ) ) {
+						if ( is_array($options) AND array_key_exists( 'paymenttype_available', $options ) AND is_array( $options['paymenttype_available'] ) ) {
 							$wirecard_gateways = $options['paymenttype_available'];
 						} else {
 							$wirecard_gateways = array();
 						}
 
-						if ( is_array( $options['subs_paymenttype_options'] ) ) {
+						if ( is_array($options) AND array_key_exists( 'subs_paymenttype_options', $options ) AND is_array( $options['subs_paymenttype_options'] ) ) {
 							$wirecard_gateways_subscription = $options['subs_paymenttype_options'];
 						} else {
 							$wirecard_gateways_subscription = array();
@@ -393,8 +406,8 @@ class vendocrat_WC_Payment_Methods {
 
 									case 'ccard' :
 										$methods.= ' credit-card';
-										$methods.= ' visa';
-										$methods.= ' mastercard';
+									//	$methods.= ' visa';
+									//	$methods.= ' mastercard';
 										break;
 
 									case 'idl' :
@@ -403,24 +416,24 @@ class vendocrat_WC_Payment_Methods {
 
 									case 'paymill' :
 										$methods.= ' paymill';
-										$methods.= ' credit-card';
+									/*	$methods.= ' credit-card';
 										$methods.= ' visa';
 										$methods.= ' mastercard';
 										$methods.= ' american-express';
 										$methods.= ' discover';
 										$methods.= ' diners';
-										$methods.= ' jcb';
+										$methods.= ' jcb';*/
 										break;
 
 									case 'paypal' :
-										$methods.= ' credit-card';
+									//	$methods.= ' credit-card';
 										$methods.= ' paypal';
-										$methods.= ' visa';
+									/*	$methods.= ' visa';
 										$methods.= ' mastercard';
 										$methods.= ' american-express';
 										$methods.= ' discover';
 										$methods.= ' diners';
-										$methods.= ' jcb';
+										$methods.= ' jcb';*/
 										break;
 
 									case 'pbx' :
@@ -474,7 +487,7 @@ class vendocrat_WC_Payment_Methods {
 						break;
 
 					case 'amazon' :
-					case 'amazon-fps' :
+					case 'amazon_fps' :
 						$methods.= ' amazon';
 						break;
 
